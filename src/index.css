@@ -257,6 +257,51 @@ p {
   color: var(--sub);
   line-height: 1.6;
 }
+.footer-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--sub);
+  text-decoration: underline;
+}
+.footer-link:hover {
+  color: var(--primary-dark);
+}
+
+/* ── 정책 페이지 ───────────────────────── */
+.policy-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 8px 0 40px;
+}
+.policy-page h1 {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+.policy-updated {
+  font-size: 13px;
+  color: var(--sub);
+  margin-bottom: 24px;
+}
+.policy-page h2 {
+  font-size: 16px;
+  margin: 28px 0 8px;
+}
+.policy-page p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+.policy-page a {
+  color: var(--primary-dark);
+}
+.policy-back-link {
+  display: inline-block;
+  margin-top: 32px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-dark);
+}
 
 /* ── 전면광고(인터스티셜) 더미 ───────────────────────── */
 .ad-overlay {
