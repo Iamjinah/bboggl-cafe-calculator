@@ -1,0 +1,41 @@
+import { useEffect, useState } from 'react';
+
+interface InterstitialAdProps {
+  onClose: () => void;
+}
+
+// 광고 노출을 보장하기 위해 일정 시간 후에만 닫기 버튼 활성화 (강제 클릭 유도 아님, 단순 노출 시간 확보)
+const AD_WAIT_SECONDS = 3;
+
+function InterstitialAd({ onClose }: InterstitialAdProps) {
+  const [remaining, setRemaining] = useState(AD_WAIT_SECONDS);
+
+  useEffect(() => {
+    if (remaining <= 0) return;
+    const timer = setTimeout(() => setRemaining((s) => s - 1), 1000);
+    return () => clearTimeout(timer);
+  }, [remaining]);
+
+  return (
+    <div className="ad-overlay" role="dialog" aria-modal="true" aria-label="광고">
+      <div className="ad-modal">
+        <button
+          type="button"
+          className="ad-close"
+          onClick={onClose}
+          disabled={remaining > 0}
+          aria-label="광고 닫기"
+        >
+          {remaining > 0 ? remaining : '✕'}
+        </button>
+        {/* TODO(PART 2): 승인된 AdSense 사이트의 실제 광고 유닛으로 교체 */}
+        <div className="ad-placeholder">
+          <p className="ad-placeholder-label">광고 영역</p>
+          <p className="ad-placeholder-sub">Google AdSense 연동 예정 (300×250)</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default InterstitialAd;

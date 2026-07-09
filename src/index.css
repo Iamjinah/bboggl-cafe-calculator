@@ -1,0 +1,394 @@
+/* 폰트: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* 색 조합: 당근 · 따뜻한 오렌지 */
+:root {
+  --primary: #ff8a3d;
+  --primary-dark: #ff6f0f;
+  --text: #212124;
+  --sub: #868b94;
+  --bg: #f8f9fa;
+  --surface: #ffffff;
+  --border: #eeeeee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* 버튼 모양: 입체 그림자 */
+.btn {
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-weight: 700;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: 0.15s;
+  font-family: inherit;
+  font-size: 15px;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  background: var(--primary-dark);
+}
+
+/* 아이콘: 둥근 라인 */
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ── 레이아웃 ───────────────────────── */
+#root {
+  min-height: 100svh;
+}
+
+.app-shell {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── 헤더 ───────────────────────── */
+.app-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.app-badge {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-dark);
+  background: rgba(255, 138, 61, 0.12);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.app-header h1 {
+  font-size: 24px;
+  line-height: 1.45;
+}
+
+.app-header .subtitle {
+  color: var(--sub);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* ── 입력 폼 ───────────────────────── */
+.calculator-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.form-section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sub);
+  margin: 24px 0 12px;
+}
+.form-section-title--first {
+  margin-top: 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 12px;
+}
+
+.input-field {
+  margin-bottom: 14px;
+}
+.input-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.input-field .input-wrap {
+  position: relative;
+}
+.input-field input {
+  width: 100%;
+  padding: 12px 42px 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--bg);
+  transition: 0.15s;
+}
+.input-field input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #fff;
+}
+.input-field .unit {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--sub);
+  font-size: 13px;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.calculate-btn {
+  width: 100%;
+  margin-top: 8px;
+  font-size: 16px;
+  padding: 14px 20px;
+}
+
+/* ── 결과 카드 ───────────────────────── */
+.result-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scroll-margin-top: 20px;
+}
+
+.result-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.result-card .icon-wrap {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 138, 61, 0.12);
+  color: var(--primary);
+}
+
+.result-card .label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--sub);
+}
+.result-card .value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 2px;
+}
+
+.result-card--primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border: none;
+  box-shadow: 0 8px 20px rgba(255, 111, 15, 0.3);
+}
+.result-card--primary .icon-wrap {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.result-card--primary .label {
+  color: rgba(255, 255, 255, 0.85);
+}
+.result-card--primary .value {
+  color: #fff;
+  font-size: 26px;
+}
+
+/* ── 푸터 ───────────────────────── */
+.app-footer {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.app-footer p {
+  font-size: 12px;
+  color: var(--sub);
+  line-height: 1.6;
+}
+
+/* ── 전면광고(인터스티셜) 더미 ───────────────────────── */
+.ad-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(33, 33, 36, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+.ad-modal {
+  position: relative;
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 16px;
+  max-width: 360px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.ad-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: var(--text);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ad-close:disabled {
+  background: var(--sub);
+  cursor: default;
+}
+
+.ad-placeholder {
+  height: 250px;
+  border: 1.5px dashed var(--border);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--bg);
+}
+.ad-placeholder-label {
+  font-weight: 700;
+  color: var(--sub);
+}
+.ad-placeholder-sub {
+  font-size: 12px;
+  color: var(--sub);
+}
+
+/* ── 디스플레이 광고 더미 ───────────────────────── */
+.display-ad {
+  border: 1.5px dashed var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--sub);
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0;
+}
+.display-ad--wide {
+  height: 90px;
+}
+.display-ad--square {
+  height: 250px;
+}
+
+/* ── 결과 페이지 ───────────────────────── */
+.result-header {
+  text-align: center;
+  margin: 8px 0 24px;
+}
+.result-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.recalculate-btn {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* ── 데스크탑 반응형 ───────────────────────── */
+@media (min-width: 900px) {
+  .app-shell {
+    max-width: 960px;
+    padding: 56px 32px 64px;
+  }
+  .app-header h1 {
+    font-size: 30px;
+  }
+  .layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .calculator-form,
+  .result-section {
+    flex: 1;
+  }
+  .result-section {
+    position: sticky;
+    top: 32px;
+  }
+
+  .result-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .result-layout .result-section {
+    flex: 1;
+    position: static;
+  }
+  .result-layout .display-ad--square {
+    width: 300px;
+    flex-shrink: 0;
+  }
+}
