@@ -21,7 +21,7 @@ function ResultPage() {
 
   return (
     <div className="app-shell">
-      <DisplayAd label="광고 영역 (728×90)" size="wide" />
+      <DisplayAd size="wide" />
 
       <header className="result-header">
         <span className="app-badge">☕ 카큘레이터</span>
@@ -31,14 +31,14 @@ function ResultPage() {
 
       <div className="result-layout">
         <ResultCards result={state.result} />
-        <DisplayAd label="광고 영역 (300×250)" size="square" />
+        <DisplayAd size="square" />
       </div>
 
       <button type="button" className="btn recalculate-btn" onClick={() => navigate('/')}>
         다시 계산하기
       </button>
 
-      <DisplayAd label="광고 영역 (728×90)" size="wide" />
+      <DisplayAd size="wide" />
       <Footer />
     </div>
   );

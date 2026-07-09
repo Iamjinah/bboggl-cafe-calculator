@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import AdUnit from './AdUnit';
 
 interface InterstitialAdProps {
   onClose: () => void;
@@ -28,10 +29,8 @@ function InterstitialAd({ onClose }: InterstitialAdProps) {
         >
           {remaining > 0 ? remaining : '✕'}
         </button>
-        {/* TODO(PART 2): 승인된 AdSense 사이트의 실제 광고 유닛으로 교체 */}
         <div className="ad-placeholder">
-          <p className="ad-placeholder-label">광고 영역</p>
-          <p className="ad-placeholder-sub">Google AdSense 연동 예정 (300×250)</p>
+          <AdUnit />
         </div>
       </div>
     </div>
