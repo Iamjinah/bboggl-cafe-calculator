@@ -1,4 +1,6 @@
 import InputField from './InputField';
+import { useLocale } from '../i18n/LocaleContext';
+import { CURRENCY_UNIT } from '../config/locale';
 import type { CalculatorInput } from '../types/calculator';
 
 interface CalculatorFormProps {
@@ -8,61 +10,75 @@ interface CalculatorFormProps {
 }
 
 function CalculatorForm({ input, onChange, onCalculate }: CalculatorFormProps) {
+  const { locale, t } = useLocale();
+  const currency = CURRENCY_UNIT[locale];
+
   return (
     <section className="calculator-form">
-      <h2 className="form-section-title form-section-title--first">고정비</h2>
+      <h2 className="form-section-title form-section-title--first">{t('sectionFixedCost')}</h2>
       <div className="form-grid">
-        <InputField label="월세" unit="원" value={input.rent} onChange={(v) => onChange('rent', v)} />
         <InputField
-          label="관리비"
-          unit="원"
+          label={t('fieldRent')}
+          unit={currency.label}
+          unitPosition={currency.position}
+          value={input.rent}
+          onChange={(v) => onChange('rent', v)}
+        />
+        <InputField
+          label={t('fieldMaintenanceFee')}
+          unit={currency.label}
+          unitPosition={currency.position}
           value={input.maintenanceFee}
           onChange={(v) => onChange('maintenanceFee', v)}
         />
         <InputField
-          label="인건비"
-          unit="원"
+          label={t('fieldLaborCost')}
+          unit={currency.label}
+          unitPosition={currency.position}
           value={input.laborCost}
           onChange={(v) => onChange('laborCost', v)}
         />
         <InputField
-          label="기타 고정비"
-          unit="원"
+          label={t('fieldOtherFixedCost')}
+          unit={currency.label}
+          unitPosition={currency.position}
           value={input.otherFixedCost}
           onChange={(v) => onChange('otherFixedCost', v)}
         />
       </div>
 
-      <h2 className="form-section-title">판매 정보</h2>
+      <h2 className="form-section-title">{t('sectionSalesInfo')}</h2>
       <div className="form-grid">
         <InputField
-          label="음료 1잔 평균 판매가"
-          unit="원"
+          label={t('fieldAvgPrice')}
+          unit={currency.label}
+          unitPosition={currency.position}
           value={input.avgPrice}
           onChange={(v) => onChange('avgPrice', v)}
         />
         <InputField
-          label="음료 1잔 평균 원가"
-          unit="원"
+          label={t('fieldAvgCost')}
+          unit={currency.label}
+          unitPosition={currency.position}
           value={input.avgCost}
           onChange={(v) => onChange('avgCost', v)}
         />
         <InputField
-          label="하루 평균 판매잔 수"
-          unit="잔"
+          label={t('fieldDailyCups')}
+          unit={t('unitCups')}
           value={input.dailyCups}
           onChange={(v) => onChange('dailyCups', v)}
         />
         <InputField
-          label="월 영업일수"
-          unit="일"
+          label={t('fieldBusinessDays')}
+          unit={t('unitDays')}
           value={input.businessDays}
           onChange={(v) => onChange('businessDays', v)}
         />
       </div>
 
       <button type="button" className="btn calculate-btn" onClick={onCalculate}>
-        결과 확인하기
+        {t('calculateButton')}
       </button>
     </section>
   );

@@ -5,17 +5,22 @@ import CalculatorForm from '../components/CalculatorForm';
 import Footer from '../components/Footer';
 import InterstitialAd from '../components/ads/InterstitialAd';
 import { useCafeCalculator } from '../hooks/useCafeCalculator';
+import { useLocale } from '../i18n/LocaleContext';
+import { useSeoMeta } from '../hooks/useSeoMeta';
 import type { ResultLocationState } from '../types/calculator';
 
 function CalculatorPage() {
-  const { input, updateField, result } = useCafeCalculator();
+  const { locale, t } = useLocale();
+  const { input, updateField, result } = useCafeCalculator(locale);
   const [showAd, setShowAd] = useState(false);
   const navigate = useNavigate();
+
+  useSeoMeta({ locale, path: '', title: t('metaTitle'), description: t('metaDescription') });
 
   const handleAdClose = () => {
     setShowAd(false);
     const state: ResultLocationState = { input, result };
-    navigate('/result', { state });
+    navigate(`/${locale}/result`, { state });
   };
 
   return (

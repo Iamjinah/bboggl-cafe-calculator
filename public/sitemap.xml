@@ -1,12 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cafe.moneymakerwebsite.com/</loc>
+    <loc>https://cafe.moneymakerwebsite.com/ko</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://cafe.moneymakerwebsite.com/ko"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cafe.moneymakerwebsite.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cafe.moneymakerwebsite.com/ko"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://cafe.moneymakerwebsite.com/privacy</loc>
+    <loc>https://cafe.moneymakerwebsite.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://cafe.moneymakerwebsite.com/ko"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cafe.moneymakerwebsite.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cafe.moneymakerwebsite.com/ko"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://cafe.moneymakerwebsite.com/ko/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://cafe.moneymakerwebsite.com/ko/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cafe.moneymakerwebsite.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cafe.moneymakerwebsite.com/ko/privacy"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://cafe.moneymakerwebsite.com/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://cafe.moneymakerwebsite.com/ko/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cafe.moneymakerwebsite.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cafe.moneymakerwebsite.com/ko/privacy"/>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>

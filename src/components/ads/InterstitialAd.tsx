@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import AdUnit from './AdUnit';
+import { useLocale } from '../../i18n/LocaleContext';
 
 interface InterstitialAdProps {
   onClose: () => void;
@@ -9,6 +10,7 @@ interface InterstitialAdProps {
 const AD_WAIT_SECONDS = 3;
 
 function InterstitialAd({ onClose }: InterstitialAdProps) {
+  const { t } = useLocale();
   const [remaining, setRemaining] = useState(AD_WAIT_SECONDS);
 
   useEffect(() => {
@@ -18,14 +20,14 @@ function InterstitialAd({ onClose }: InterstitialAdProps) {
   }, [remaining]);
 
   return (
-    <div className="ad-overlay" role="dialog" aria-modal="true" aria-label="광고">
+    <div className="ad-overlay" role="dialog" aria-modal="true" aria-label={t('adDialogLabel')}>
       <div className="ad-modal">
         <button
           type="button"
           className="ad-close"
           onClick={onClose}
           disabled={remaining > 0}
-          aria-label="광고 닫기"
+          aria-label={t('adCloseLabel')}
         >
           {remaining > 0 ? remaining : '✕'}
         </button>

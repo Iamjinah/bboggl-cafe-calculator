@@ -1,6 +1,7 @@
 import ResultCard from './ResultCard';
 import type { CalculatorResult } from '../types/calculator';
 import { formatCurrency, formatCups } from '../utils/format';
+import { useLocale } from '../i18n/LocaleContext';
 
 interface ResultCardsProps {
   result: CalculatorResult;
@@ -37,6 +38,7 @@ const iconBreakEven = (
 );
 
 function ResultCards({ result }: ResultCardsProps) {
+  const { locale, t } = useLocale();
   const { monthlyRevenue, monthlyExpense, monthlyProfit, breakEvenCups } = result;
 
   return (
@@ -44,15 +46,15 @@ function ResultCards({ result }: ResultCardsProps) {
       <ResultCard
         highlight
         icon={iconProfit}
-        label="예상 월순이익"
-        value={formatCurrency(monthlyProfit)}
+        label={t('resultProfit')}
+        value={formatCurrency(monthlyProfit, locale)}
       />
-      <ResultCard icon={iconRevenue} label="예상 월매출" value={formatCurrency(monthlyRevenue)} />
-      <ResultCard icon={iconExpense} label="예상 월지출" value={formatCurrency(monthlyExpense)} />
+      <ResultCard icon={iconRevenue} label={t('resultRevenue')} value={formatCurrency(monthlyRevenue, locale)} />
+      <ResultCard icon={iconExpense} label={t('resultExpense')} value={formatCurrency(monthlyExpense, locale)} />
       <ResultCard
         icon={iconBreakEven}
-        label="하루 손익분기점 판매잔 수"
-        value={breakEvenCups !== null ? formatCups(breakEvenCups) : '계산 불가 (판매가 ≤ 원가)'}
+        label={t('resultBreakEven')}
+        value={breakEvenCups !== null ? formatCups(breakEvenCups, locale) : t('breakEvenUnavailable')}
       />
     </section>
   );

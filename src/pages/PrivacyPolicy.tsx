@@ -1,14 +1,91 @@
 import { Link } from 'react-router-dom';
+import LanguageSwitcher from '../components/LanguageSwitcher';
+import { useLocale } from '../i18n/LocaleContext';
+import { useSeoMeta } from '../hooks/useSeoMeta';
 
-const EFFECTIVE_DATE = '2026년 7월 9일';
 const CONTACT_EMAIL = '0.1kjina1024@gmail.com';
 
 function PrivacyPolicy() {
+  const { locale, t } = useLocale();
+
+  useSeoMeta({
+    locale,
+    path: '/privacy',
+    title: t('privacyMetaTitle'),
+    description: t('metaDescription'),
+  });
+
+  if (locale === 'en') {
+    return (
+      <div className="app-shell">
+        <div className="policy-page">
+          <LanguageSwitcher />
+          <h1>Privacy Policy</h1>
+          <p className="policy-updated">Effective date: July 9, 2026</p>
+
+          <p>
+            Ka-culator (&quot;the Site&quot;) values your privacy and provides this policy to explain how
+            information is handled when you use the Site.
+          </p>
+
+          <h2>1. Information Collected and How</h2>
+          <p>
+            The Site can be used without creating an account or signing in. Values you enter into the
+            calculator (rent, price, etc.) are calculated entirely in your browser and are never sent to or
+            stored on a server. However, cookies may automatically collect information for advertising and
+            traffic analytics, as described below.
+          </p>
+
+          <h2>2. Use of Cookies</h2>
+          <p>
+            The Site displays ads through Google AdSense. Google and other third-party vendors use cookies
+            to serve ads based on your prior visits to this or other websites. You can opt out of
+            personalized advertising in{' '}
+            <a href="https://www.google.com/settings/ads" target="_blank" rel="noreferrer">
+              Google Ads Settings
+            </a>{' '}
+            , and opt out of third-party vendor cookies used for personalized advertising at{' '}
+            <a href="https://www.aboutads.info" target="_blank" rel="noreferrer">
+              www.aboutads.info
+            </a>
+            . You may also disable cookies through your browser settings, though some features may be
+            limited as a result.
+          </p>
+
+          <h2>3. Data Retention</h2>
+          <p>
+            The Site does not collect or store any account information, so it holds no personal data of its
+            own. Information collected via advertising cookies is retained according to the policies of
+            Google and other ad vendors.
+          </p>
+
+          <h2>4. Changes to This Policy</h2>
+          <p>
+            This policy may change to reflect updates to applicable law or the Site&apos;s services. Any
+            changes will be posted on this page.
+          </p>
+
+          <h2>5. Contact</h2>
+          <p>
+            For privacy-related inquiries, please contact us at the email below.
+            <br />
+            Email: {CONTACT_EMAIL}
+          </p>
+
+          <Link to="/en" className="policy-back-link">
+            ← Back to calculator
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="app-shell">
       <div className="policy-page">
+        <LanguageSwitcher />
         <h1>개인정보처리방침</h1>
-        <p className="policy-updated">시행일자: {EFFECTIVE_DATE}</p>
+        <p className="policy-updated">시행일자: 2026년 7월 9일</p>
 
         <p>
           카큘레이터(이하 &quot;사이트&quot;)는 이용자의 개인정보를 소중히 여기며, 관련 법령을 준수하기 위해 다음과
@@ -55,7 +132,7 @@ function PrivacyPolicy() {
           이메일: {CONTACT_EMAIL}
         </p>
 
-        <Link to="/" className="policy-back-link">
+        <Link to="/ko" className="policy-back-link">
           ← 계산기로 돌아가기
         </Link>
       </div>

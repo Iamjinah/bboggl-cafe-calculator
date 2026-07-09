@@ -84,6 +84,28 @@ p {
   gap: 24px;
 }
 
+/* ── 언어 스위처 ───────────────────────── */
+.lang-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+.lang-switcher a {
+  color: var(--sub);
+  text-decoration: none;
+}
+.lang-switcher a.lang-active {
+  color: var(--primary-dark);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.lang-divider {
+  color: var(--border);
+}
+
 /* ── 헤더 ───────────────────────── */
 .app-header {
   text-align: center;
@@ -176,6 +198,13 @@ p {
   font-size: 13px;
   font-weight: 500;
   pointer-events: none;
+}
+.input-field .unit--prefix {
+  right: auto;
+  left: 14px;
+}
+.input-field input.has-prefix {
+  padding-left: 28px;
 }
 
 .calculate-btn {

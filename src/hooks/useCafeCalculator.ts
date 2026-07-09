@@ -1,20 +1,9 @@
 import { useMemo, useState } from 'react';
 import type { CalculatorInput, CalculatorResult } from '../types/calculator';
+import { LOCALE_CONFIG, type Locale } from '../config/locale';
 
-// 화면이 비어 보이지 않도록 채워둔 더미 초기값 (소형 카페 기준)
-const DEFAULT_INPUT: CalculatorInput = {
-  rent: 1500000,
-  maintenanceFee: 200000,
-  laborCost: 2800000,
-  otherFixedCost: 300000,
-  avgPrice: 4500,
-  avgCost: 1500,
-  dailyCups: 120,
-  businessDays: 26,
-};
-
-export function useCafeCalculator() {
-  const [input, setInput] = useState<CalculatorInput>(DEFAULT_INPUT);
+export function useCafeCalculator(locale: Locale) {
+  const [input, setInput] = useState<CalculatorInput>(LOCALE_CONFIG[locale].defaultInput);
 
   const updateField = (field: keyof CalculatorInput, value: number) => {
     setInput((prev) => ({ ...prev, [field]: value }));
