@@ -3,6 +3,8 @@ import LocaleLayout from './pages/LocaleLayout';
 import HubPage from './pages/HubPage';
 import CalculatorPage from './pages/CalculatorPage';
 import ResultPage from './pages/ResultPage';
+import LoanCalculatorPage from './pages/LoanCalculatorPage';
+import LoanResultPage from './pages/LoanResultPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import { DEFAULT_LOCALE } from './config/locale';
 
@@ -25,6 +27,8 @@ function App() {
           <Route index element={<HubPage />} />
           <Route path="cafe-profit" element={<CalculatorPage />} />
           <Route path="cafe-profit/result" element={<ResultPage />} />
+          <Route path="loan-repayment" element={<LoanCalculatorPage />} />
+          <Route path="loan-repayment/result" element={<LoanResultPage />} />
           <Route path="privacy" element={<PrivacyPolicy />} />
           <Route path="*" element={<LocaleFallback />} />
         </Route>

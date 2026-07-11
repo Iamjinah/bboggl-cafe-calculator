@@ -46,7 +46,7 @@ export const CALCULATORS: CalculatorMeta[] = [
     slug: 'loan-repayment',
     category: 'loan',
     icon: '🏦',
-    status: 'coming',
+    status: 'live',
     name: { ko: '대출 이자 계산기', en: 'Loan Repayment Calculator' },
     description: { ko: '원리금 월 상환액과 총이자', en: 'Monthly payment and total interest' },
   },

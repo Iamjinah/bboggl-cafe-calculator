@@ -26,7 +26,7 @@ const ko = {
   resultPageSubtitle: '입력하신 정보를 기준으로 예상 손익을 계산했어요.',
   recalculateButton: '다시 계산하기',
   footerDisclaimer:
-    '본 계산기는 단순 참고용이며 실제 수익은 상권, 운영 방식, 세금, 계절, 인건비에 따라 달라질 수 있습니다.',
+    '본 계산기는 참고용이며, 실제 결과는 조건과 상황에 따라 달라질 수 있습니다.',
   footerPrivacyLink: '개인정보처리방침',
   adCloseLabel: '광고 닫기',
   adDialogLabel: '광고',
@@ -40,6 +40,21 @@ const ko = {
   hubMetaTitle: '머니 계산기 - 돈 계산은 한 곳에서',
   hubMetaDescription: '카페 수익, 연봉 실수령액, 대출 이자, 복리까지 — 자주 쓰는 돈 계산기를 무료로 모았습니다.',
   navAllCalculators: '← 전체 계산기',
+  loanBadge: '🏦 대출 계산기',
+  loanTitle: '대출받기 전, 매달 얼마씩 갚아야 하는지 계산해보세요',
+  loanSubtitle: '원금·금리·기간만 넣으면 월 상환액과 총이자를 바로 확인할 수 있어요. (원리금균등상환 기준)',
+  loanMetaTitle: '대출 이자 계산기 - 월 상환액·총이자 계산',
+  loanMetaDescription: '대출 원금·연 이자율·기간을 입력하면 원리금균등상환 기준 월 상환액과 총이자를 계산해주는 무료 대출 계산기.',
+  loanFieldPrincipal: '대출 원금',
+  loanFieldRate: '연 이자율',
+  loanFieldYears: '대출 기간',
+  loanUnitPercent: '%',
+  loanUnitYears: '년',
+  loanResultMonthly: '월 상환액',
+  loanResultTotalInterest: '총 이자',
+  loanResultTotalPayment: '총 상환액',
+  loanResultPageTitle: '대출 상환 계산 결과',
+  loanResultPageSubtitle: '원리금균등상환 기준으로 계산한 예상 상환액이에요.',
 };
 
 const en: typeof ko = {
@@ -69,7 +84,7 @@ const en: typeof ko = {
   resultPageSubtitle: "Here's your estimated profit based on what you entered.",
   recalculateButton: 'Calculate Again',
   footerDisclaimer:
-    'This calculator is for reference only. Actual profit may vary by location, operations, taxes, season, and labor costs.',
+    'This calculator is for reference only. Actual results may vary depending on your conditions.',
   footerPrivacyLink: 'Privacy Policy',
   adCloseLabel: 'Close ad',
   adDialogLabel: 'Advertisement',
@@ -85,6 +100,23 @@ const en: typeof ko = {
   hubMetaDescription:
     'Cafe profit, net salary, loan interest, compound interest — a free collection of everyday money calculators.',
   navAllCalculators: '← All calculators',
+  loanBadge: '🏦 Loan Calculator',
+  loanTitle: 'Before you borrow, see how much you will repay each month',
+  loanSubtitle:
+    'Enter the amount, rate, and term to instantly see your monthly payment and total interest. (Equal principal + interest)',
+  loanMetaTitle: 'Loan Repayment Calculator - Monthly Payment & Total Interest',
+  loanMetaDescription:
+    'Enter loan amount, annual rate, and term to calculate the monthly payment and total interest with this free loan repayment calculator.',
+  loanFieldPrincipal: 'Loan Amount',
+  loanFieldRate: 'Annual Interest Rate',
+  loanFieldYears: 'Loan Term',
+  loanUnitPercent: '%',
+  loanUnitYears: 'yr',
+  loanResultMonthly: 'Monthly Payment',
+  loanResultTotalInterest: 'Total Interest',
+  loanResultTotalPayment: 'Total Repayment',
+  loanResultPageTitle: 'Your Loan Repayment',
+  loanResultPageSubtitle: 'Estimated repayment based on equal monthly principal + interest.',
 };
 
 export const translations: Record<Locale, typeof ko> = { ko, en };
