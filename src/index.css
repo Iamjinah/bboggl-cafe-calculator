@@ -274,6 +274,107 @@ p {
   font-size: 26px;
 }
 
+/* ── 카페 가이드 콘텐츠 ───────────────────────── */
+.guide {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.guide-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.guide-block {
+  margin-bottom: 28px;
+}
+.guide-block h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.guide-block p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text);
+}
+.guide-block strong {
+  color: var(--primary-dark);
+}
+.guide-list {
+  margin: 0;
+  padding-left: 18px;
+}
+.guide-list li {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.guide-table-wrap {
+  margin-top: 12px;
+  overflow-x: auto;
+}
+.guide-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.guide-table th,
+.guide-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.guide-table thead th {
+  background: rgba(255, 138, 61, 0.1);
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+.guide-table tbody tr:last-child td {
+  border-bottom: none;
+  font-weight: 700;
+}
+.guide-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.guide-faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+.guide-faq-item summary {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  list-style: none;
+}
+.guide-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.guide-faq-item summary::before {
+  content: '＋';
+  color: var(--primary);
+  font-weight: 700;
+  margin-right: 8px;
+}
+.guide-faq-item[open] summary::before {
+  content: '－';
+}
+.guide-faq-item p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--sub);
+  margin-top: 10px;
+}
+
 /* ── 푸터 ───────────────────────── */
 .app-footer {
   margin-top: 32px;

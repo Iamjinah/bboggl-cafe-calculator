@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import CalculatorForm from '../components/CalculatorForm';
+import CafeGuide from '../components/CafeGuide';
 import Footer from '../components/Footer';
 import InterstitialAd from '../components/ads/InterstitialAd';
 import { useCafeCalculator } from '../hooks/useCafeCalculator';
@@ -27,6 +28,7 @@ function CalculatorPage() {
     <div className="app-shell">
       <Header />
       <CalculatorForm input={input} onChange={updateField} onCalculate={() => setShowAd(true)} />
+      <CafeGuide />
       <Footer />
       {showAd && <InterstitialAd onClose={handleAdClose} />}
     </div>
