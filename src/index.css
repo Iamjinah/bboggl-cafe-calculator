@@ -288,6 +288,15 @@ p {
 .guide-block {
   margin-bottom: 28px;
 }
+.guide-lead {
+  background: rgba(255, 138, 61, 0.08);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.guide-lead p {
+  font-size: 15px;
+}
 .guide-block h3 {
   font-size: 17px;
   margin-bottom: 10px;

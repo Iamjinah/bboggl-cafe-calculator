@@ -60,6 +60,15 @@ function CafeGuide() {
     <section className="guide">
       <h2 className="guide-title">카페 수익, 이렇게 계산됩니다</h2>
 
+      <div className="guide-block guide-lead">
+        <p>
+          임대료, 인건비, 재료비… 카페는 문을 여는 순간부터 매달 돈이 나갑니다. 그런데 정작{' '}
+          <strong>하루 몇 잔을 팔아야 본전인지</strong> 모르고 시작하면, 바쁘게 팔고도 통장은 마이너스일 수
+          있습니다. 이 계산기는 당신의 고정비와 판매 정보로 그 손익분기점을 숫자로 보여줍니다. 회원가입도 비용도
+          없이 30초면 충분합니다. <strong>상가 계약서에 도장을 찍기 전에</strong>, 위에 숫자를 넣어 확인해보세요.
+        </p>
+      </div>
+
       <div className="guide-block">
         <h3>☕ 매출은 결국 세 숫자의 곱</h3>
         <p>

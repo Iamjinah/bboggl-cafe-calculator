@@ -2,8 +2,8 @@ import type { Locale } from '../config/locale';
 
 const ko = {
   badge: '☕ 카큘레이터',
-  title: '카페 창업 전, 하루 몇 잔 팔아야 남는지 계산해보세요.',
-  subtitle: '월세·인건비 등 고정비와 판매 정보를 입력하면 예상 손익을 바로 확인할 수 있어요.',
+  title: '카페 창업 전, 하루 몇 잔 팔아야 남는 장사인지 계산해보세요',
+  subtitle: '임대료·인건비는 매달 꼬박꼬박 나갑니다. 문 열기 전에, 하루 손익분기점부터 숫자로 확인하세요.',
   sectionFixedCost: '고정비',
   sectionSalesInfo: '판매 정보',
   fieldRent: '월세',
