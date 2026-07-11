@@ -33,6 +33,13 @@ const ko = {
   metaTitle: '카큘레이터 - 손쉬운 카페 수익 계산',
   metaDescription: '카페 창업 전, 하루 몇 잔 팔아야 남는지 계산해보는 카큘레이터 월수익 계산기',
   privacyMetaTitle: '개인정보처리방침 | 카큘레이터',
+  hubBadge: '🧮 머니 계산기',
+  hubTitle: '돈이 되는 계산, 한 곳에서',
+  hubSubtitle: '창업·급여·대출·저축까지 — 복잡한 돈 계산을 무료로, 빠르게.',
+  hubComingBadge: '준비 중',
+  hubMetaTitle: '머니 계산기 - 돈 계산은 한 곳에서',
+  hubMetaDescription: '카페 수익, 연봉 실수령액, 대출 이자, 복리까지 — 자주 쓰는 돈 계산기를 무료로 모았습니다.',
+  navAllCalculators: '← 전체 계산기',
 };
 
 const en: typeof ko = {
@@ -70,6 +77,14 @@ const en: typeof ko = {
   metaDescription:
     'Find out how many cups a day you need to sell to break even before opening a cafe, with Ka-culator.',
   privacyMetaTitle: 'Privacy Policy | Ka-culator',
+  hubBadge: '🧮 Money Calculators',
+  hubTitle: 'Money math, all in one place',
+  hubSubtitle: 'Startup, salary, loans, savings — free, fast money calculators.',
+  hubComingBadge: 'Coming soon',
+  hubMetaTitle: 'Money Calculators - All Your Money Math in One Place',
+  hubMetaDescription:
+    'Cafe profit, net salary, loan interest, compound interest — a free collection of everyday money calculators.',
+  navAllCalculators: '← All calculators',
 };
 
 export const translations: Record<Locale, typeof ko> = { ko, en };

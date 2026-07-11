@@ -24,10 +24,10 @@ function ResultPage() {
     };
   }, []);
 
-  // 새로고침 등으로 직접 /result에 들어온 경우 입력 데이터가 없으므로 첫 화면으로 돌려보냄
+  // 새로고침 등으로 직접 진입해 입력 데이터가 없으면 계산기 화면으로 돌려보냄
   useEffect(() => {
     if (!state) {
-      navigate(`/${locale}`, { replace: true });
+      navigate(`/${locale}/cafe-profit`, { replace: true });
     }
   }, [state, navigate, locale]);
 
@@ -49,7 +49,11 @@ function ResultPage() {
         <DisplayAd size="square" />
       </div>
 
-      <button type="button" className="btn recalculate-btn" onClick={() => navigate(`/${locale}`)}>
+      <button
+        type="button"
+        className="btn recalculate-btn"
+        onClick={() => navigate(`/${locale}/cafe-profit`)}
+      >
         {t('recalculateButton')}
       </button>
 

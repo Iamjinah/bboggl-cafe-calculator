@@ -274,6 +274,100 @@ p {
   font-size: 26px;
 }
 
+/* ── 허브 랜딩 ───────────────────────── */
+.hub-cat {
+  margin-bottom: 32px;
+}
+.hub-cat-title {
+  font-size: 16px;
+  color: var(--sub);
+  margin-bottom: 12px;
+}
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.calc-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  text-decoration: none;
+  color: inherit;
+  transition: 0.15s;
+}
+.calc-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  border-color: var(--primary);
+}
+.calc-card--coming {
+  opacity: 0.6;
+  cursor: default;
+}
+.calc-card--coming:hover {
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-color: var(--border);
+}
+.calc-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 138, 61, 0.12);
+  font-size: 22px;
+}
+.calc-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+.calc-name {
+  font-weight: 700;
+  font-size: 15px;
+}
+.calc-desc {
+  font-size: 13px;
+  color: var(--sub);
+}
+.coming-badge {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--sub);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+.back-to-hub {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sub);
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+.back-to-hub:hover {
+  color: var(--primary-dark);
+}
+@media (min-width: 720px) {
+  .calc-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /* ── 카페 가이드 콘텐츠 ───────────────────────── */
 .guide {
   margin-top: 40px;

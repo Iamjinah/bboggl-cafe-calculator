@@ -17,6 +17,22 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://cafe.moneymakerwebsite.com/ko/cafe-profit</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://cafe.moneymakerwebsite.com/ko/cafe-profit"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cafe.moneymakerwebsite.com/en/cafe-profit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cafe.moneymakerwebsite.com/ko/cafe-profit"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cafe.moneymakerwebsite.com/en/cafe-profit</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://cafe.moneymakerwebsite.com/ko/cafe-profit"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cafe.moneymakerwebsite.com/en/cafe-profit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cafe.moneymakerwebsite.com/ko/cafe-profit"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://cafe.moneymakerwebsite.com/ko/privacy</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://cafe.moneymakerwebsite.com/ko/privacy"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://cafe.moneymakerwebsite.com/en/privacy"/>

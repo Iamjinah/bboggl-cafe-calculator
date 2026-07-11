@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Header from '../components/Header';
 import CalculatorForm from '../components/CalculatorForm';
 import CafeGuide from '../components/CafeGuide';
@@ -16,16 +16,24 @@ function CalculatorPage() {
   const [showAd, setShowAd] = useState(false);
   const navigate = useNavigate();
 
-  useSeoMeta({ locale, path: '', title: t('metaTitle'), description: t('metaDescription') });
+  useSeoMeta({
+    locale,
+    path: '/cafe-profit',
+    title: t('metaTitle'),
+    description: t('metaDescription'),
+  });
 
   const handleAdClose = () => {
     setShowAd(false);
     const state: ResultLocationState = { input, result };
-    navigate(`/${locale}/result`, { state });
+    navigate(`/${locale}/cafe-profit/result`, { state });
   };
 
   return (
     <div className="app-shell">
+      <Link to={`/${locale}`} className="back-to-hub">
+        {t('navAllCalculators')}
+      </Link>
       <Header />
       <CalculatorForm input={input} onChange={updateField} onCalculate={() => setShowAd(true)} />
       <CafeGuide />
