@@ -6,6 +6,7 @@ import ResultPage from './pages/ResultPage';
 import LoanCalculatorPage from './pages/LoanCalculatorPage';
 import LoanResultPage from './pages/LoanResultPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import BuildingPage from './pages/BuildingPage';
 import { DEFAULT_LOCALE } from './config/locale';
 
 // 알 수 없는 하위 경로는 해당 언어의 허브로 되돌림 (locale 유지)
@@ -22,6 +23,9 @@ function App() {
         <Route path="/" element={<Navigate to={`/${DEFAULT_LOCALE}`} replace />} />
         <Route path="/result" element={<Navigate to={`/${DEFAULT_LOCALE}/cafe-profit`} replace />} />
         <Route path="/privacy" element={<Navigate to={`/${DEFAULT_LOCALE}/privacy`} replace />} />
+
+        {/* 건축 색채 도감 — 계산기와 분리된 독립 라우트 (i18n 밖) */}
+        <Route path="/buildings/:id" element={<BuildingPage />} />
 
         <Route path="/:locale" element={<LocaleLayout />}>
           <Route index element={<HubPage />} />
