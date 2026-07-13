@@ -5,6 +5,8 @@ import CalculatorPage from './pages/CalculatorPage';
 import ResultPage from './pages/ResultPage';
 import LoanCalculatorPage from './pages/LoanCalculatorPage';
 import LoanResultPage from './pages/LoanResultPage';
+import SalaryCalculatorPage from './pages/SalaryCalculatorPage';
+import SalaryResultPage from './pages/SalaryResultPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import { DEFAULT_LOCALE } from './config/locale';
 
@@ -29,6 +31,8 @@ function App() {
           <Route path="cafe-profit/result" element={<ResultPage />} />
           <Route path="loan-repayment" element={<LoanCalculatorPage />} />
           <Route path="loan-repayment/result" element={<LoanResultPage />} />
+          <Route path="salary-net" element={<SalaryCalculatorPage />} />
+          <Route path="salary-net/result" element={<SalaryResultPage />} />
           <Route path="privacy" element={<PrivacyPolicy />} />
           <Route path="*" element={<LocaleFallback />} />
         </Route>
