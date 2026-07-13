@@ -274,6 +274,36 @@ p {
   font-size: 26px;
 }
 
+/* ── 공제 항목 내역 (연봉 계산기) ─────── */
+.deduction-list {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.deduction-list-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sub);
+  margin-bottom: 8px;
+}
+.deduction-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 15px;
+  color: var(--text);
+  border-top: 1px solid var(--border);
+}
+.deduction-row:first-of-type {
+  border-top: none;
+}
+.deduction-row span:last-child {
+  font-weight: 600;
+}
+
 /* ── 허브 랜딩 ───────────────────────── */
 .hub-cat {
   margin-bottom: 32px;

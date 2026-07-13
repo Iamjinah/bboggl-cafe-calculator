@@ -38,7 +38,7 @@ export const CALCULATORS: CalculatorMeta[] = [
     slug: 'salary-net',
     category: 'salary',
     icon: '💰',
-    status: 'coming',
+    status: 'live',
     name: { ko: '연봉 실수령액 계산기', en: 'Net Salary Calculator' },
     description: { ko: '세금·4대보험 뗀 월 실수령액', en: 'Take-home pay after tax' },
   },
